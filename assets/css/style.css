@@ -1,0 +1,52 @@
+body{
+    background-image: url("http://thecutestblogontheblock.com/wp-content/uploads/2011/11/harry-potter-Magic-copy-1000x500.jpg");
+    background-repeat: repeat;
+    background-size: 100%;
+
+}
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #dddddd;
+    text-align: center;
+    padding: 50px 0px 0px 0px;
+}
+h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #dddddd;
+    text-align: center;
+    padding: 10px 0px 20px 0px;
+}
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #dddddd;
+    text-align: center;
+}
+#result {
+    padding: 0px 0px 0px 40px;
+}
+#gamePlay {
+    padding: 0px 40px 0px 0px;
+}
+@media only screen and (max-width: 768px){
+body{
+    background-image: url("https://i.pinimg.com/736x/70/eb/df/70ebdfd53bbb0ffda6d115636c0aa9fd--harry-potter-background-backgrounds.jpg");
+    background-repeat: repeat;
+    background-size: 100%;
+}h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
+    text-align: center;
+    padding: 50px 0px 0px 0px;
+}
+h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0px 20px 0px;
+}
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
+    text-align: center;
+}
+}
