@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Harry Potter Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
@@ -31,7 +32,7 @@
             <div id="result" class="col-lg-3 col-md-6 col-xs-12">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-xs-12">
-                        <img id="picture" src="https://i.pinimg.com/originals/5a/c8/62/5ac862248be8ee90686a162c2aadf62f.jpg" alt="Harry Potter" height="150px"
+                        <img id="picture" src="https://i.pinimg.com/originals/5a/c8/62/5ac862248be8ee90686a162c2aadf62f.jpg" alt="Harry Potter" 
                         />
                     </div>
                 </div>
@@ -50,16 +51,14 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-xs-12">
-                        <p id="directions">Press
-                            <button id="new-game-button">NewGame</button>
-                            <br> to begin!</p>
-                        <p id="wins">Wins: 0</p>
-                        <p id="losses">Losses: 0</p>
+                        <p id="placeholder">Word: </p>
+                        <p> Number of guesses: </p>
+                        <p id="guess-left"></p>
+                        <p> Letters already guessed.</p>
+                        <p id="guess-letter"></p>
                     </div>
                 </div>
                 <div class="row">
-                    <br>
-                    <br>
                     <br>
                 </div>
             </div>
@@ -70,11 +69,12 @@
             <div class="col-lg-3 col-md-0 col-xs-0">
             </div>
             <div class="col-lg-6 col-md-12 col-xs-12">
-                <p id="placeholder">Word: </p>
-                <p> Number of guesses: </p>
-                <p id="guess-left"></p>
-                <p> Letters already guessed.</p>
-                <p id="guess-letter"></p>
+                <p id="directions">Press
+                    <button id="new-game-button">NewGame</button>
+                    to begin!</p>
+                <p id="wins">Wins: 0</p>
+                <p id="losses">Losses: 0</p>
+
             </div>
             <div class="col-lg-3 col-md-0 col-xs-0">
             </div>

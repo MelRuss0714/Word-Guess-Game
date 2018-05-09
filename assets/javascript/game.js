@@ -22,6 +22,7 @@ var answer = "";
 var answerArray = [];
 var guessLetter = [];
 var wrongLetter = [];
+var sound;
 
 
 //Create a new game function to reset all stats and pick a new word and create placeholders
@@ -94,10 +95,12 @@ function checkLoss(){
         $placeholder.textContent = answer;
         changeImage();
         changeTrivia();
+        //soundPlay();
     }
     
-}
 
+}
+checkWin();
 //check win
 function checkWin(){
     if (answer.toLowerCase === answerArray.join("").toLowerCase){
@@ -106,9 +109,9 @@ function checkWin(){
         $wins.textContent = ("Wins: " + wins);
         changeImage();
         changeTrivia();
+        //soundPlay();
     }
 }
-checkWin();
 //Change the image function
 function changeImage() {
     if (answer === "Slytherin") {
@@ -141,7 +144,28 @@ function changeTrivia() {
 }
 //Play sound function
 
-
+function soundPlay() {
+    if (guessesLeft === 0) {
+        sound("http://www.moviesoundclips.net/movies1/potter1/accepted.mp3");
+    }
+    if (answer.toLowerCase === answerArray.join("").toLowerCase) {
+        sound("http://www.moviesoundclips.net/movies1/potter1/nosuchthing.mp3"); 
+    }
+    function sound(src) {
+        this.sound = document.createElement("audio");
+        this.sound.src = src;
+        this.sound.setAttribute("preload", "auto");
+        this.sound.setAttribute("controls", "none");
+        this.sound.style.display = "none";
+        document.body.appendChild(this.sound);
+        this.play = function(){
+            this.sound.play();
+        }
+        this.stop = function(){
+            this.sound.pause();
+        }
+    }
+}
 //Add event listenier for new game button
 $newGameButton.addEventListener("click", newGame);
 //Add onkey up event to trigger letter guess
