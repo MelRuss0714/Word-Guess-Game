@@ -35,6 +35,7 @@ function newGame () {
     answerArray = [];
 //Pick new word
     answer = wordbank[Math.floor(Math.random() * wordbank.length)];
+    console.log(answer);
 //Create placeholders
 for (var i = 0; i < answer.length; i++){
     if (answer[i]===" "){
@@ -62,6 +63,7 @@ function letterGuess (letter){
         }
         $placeholder.textContent = "Word: " + answerArray.join(" ");
         checkWrong(letter);
+        
     }
     else {
         if (gameRunning === false){
@@ -81,9 +83,14 @@ function checkWrong(letter){
         wrongLetter.push(letter);
         $guessLetter.textContent = wrongLetter.join(" ");
         $guessesLeft.textContent = guessesLeft;
+        
+    }else{
+        checkLoss();
+        checkWin();
     }
-       
-    checkLoss();
+    
+  
+    
 }
    
 //check losing
@@ -100,10 +107,12 @@ function checkLoss(){
     
 
 }
-checkWin();
+
 //check win
 function checkWin(){
-    if (answer.toLowerCase === answerArray.join("").toLowerCase){
+
+    console.log("something",answer, answerArray.join(""))
+    if (answer === answerArray.join("").toString()){
         wins ++;
         gameRunning = false;
         $wins.textContent = ("Wins: " + wins);
@@ -112,6 +121,8 @@ function checkWin(){
         //soundPlay();
     }
 }
+    
+
 //Change the image function
 function changeImage() {
     if (answer === "Slytherin") {
@@ -172,9 +183,10 @@ $newGameButton.addEventListener("click", newGame);
 
  document.onkeyup = function(event){
      if (event.keyCode >= 65 && event.keyCode <= 90){
-         letterGuess(event.key);   
+         letterGuess(event.key); 
+           
      }
-    
+     
  }
 
 
